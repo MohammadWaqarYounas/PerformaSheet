@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">FinalLayout</string>
+    <string-array name="citynames">
+        <item>Lahore</item>
+        <item>Islamabad</item>
+        <item>Karachi</item>
+        <item>Quetta</item>
+        <item>Multan</item>
+    </string-array>
+</resources>
