@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 textView.setText(date);
             }
         };
-        //--------------------------------------------------------------------------------
+        //----------------------------------------------------------------------------------
 
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
