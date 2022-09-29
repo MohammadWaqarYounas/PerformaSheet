@@ -7,6 +7,7 @@ import android.app.DatePickerDialog;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -50,6 +51,20 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
 
 
+
+
+        //DATE PICKER---------------------------------------------------------------------
+        dateset = new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker datePicker, int year, int month, int day) {
+                Log.e(getClass().getName(),"Date set.");
+                month=month+1;
+                String date=month+"/"+day+"/"+year;
+                textView.setText(date);
+            }
+        };
+        //--------------------------------------------------------------------------------
+
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -60,14 +75,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 DatePickerDialog dialog= new DatePickerDialog(MainActivity.this, android.R.style.Theme_Holo_Light_Dialog_MinWidth,dateset,year,month,day);
                 dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                 dialog.show();
-                dateset = new DatePickerDialog.OnDateSetListener() {
-                    @Override
-                    public void onDateSet(DatePicker datePicker, int year, int month, int day) {
-                        month=month+1;
-                        String date=month+"/"+day+"/"+year;
-                        textView.setText(date);
-                    }
-                };
+
             }
         });
     }

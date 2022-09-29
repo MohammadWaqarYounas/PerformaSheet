@@ -149,7 +149,7 @@
             android:background="@drawable/roundedcorners"
             android:fontFamily="monospace"
             android:gravity="center_vertical"
-            android:hint="10/12/2022"
+            android:text="10/12/2022"
             android:paddingLeft="@dimen/_10sdp"
             android:textSize="@dimen/_13ssp" />
 
@@ -929,7 +929,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/table"
             android:layout_marginTop="@dimen/_20sdp"
-            android:backgroundTint="#423838"
+            android:backgroundTint="#3e3e3e"
             android:text="UPLOAD IMAGE"
             android:textColor="@color/white"
             android:textSize="@dimen/_10sdp" />
@@ -992,6 +992,7 @@
             android:padding="@dimen/_10sdp" />
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/submitbtn"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_50sdp"
             android:layout_below="@+id/edt3"
@@ -1000,5 +1001,13 @@
             android:backgroundTint="@color/Green"
             app:cornerRadius="@dimen/_10sdp"
             android:text="SUBMIT" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_below="@id/submitbtn"
+            android:layout_centerHorizontal="true"
+            android:text="Powered by PITB"/>
     </RelativeLayout>
 </ScrollView>
